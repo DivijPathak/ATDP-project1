@@ -1,0 +1,38 @@
+body{
+    background:lightblue;
+    margin:30px;
+}
+
+.container{
+    margin:auto;
+    background:coral;
+    padding:20px;
+    border-radius:50px;
+}
+
+
+
+.question{
+    margin-top:20px;
+    padding-bottom:11px;
+    border-bottom:3px solid black;
+}
+
+label{
+    display:block;
+    margin:10px;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=radio]{
+    padding:10px;
+    margin-bottom:21px;
+    box-sizing:border-box;
+}
+
+input[type=submit]{
+    padding:10px 25px;
+    font-size:30px;
+}
