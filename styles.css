@@ -1,15 +1,18 @@
 body{
-    background:lightblue;
+    background:#e9ecf0;
     margin:30px;
 }
 
 .container{
     margin:auto;
-    background:coral;
+    background:white;
     padding:20px;
     border-radius:50px;
+    box-shadow:0 0 10px rgba(0,0,0,.20);
 }
-
+h1,h2{
+    color:#3e6ccf;
+}
 
 
 .question{
@@ -33,6 +36,8 @@ input[type=radio]{
 }
 
 input[type=submit]{
+    background:#1a54d2;
+    color:white;
     padding:10px 25px;
     font-size:30px;
 }

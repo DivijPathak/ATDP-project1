@@ -90,8 +90,6 @@ foreach ($questions as $i => $question) {
 <input type="submit" value="See Position!">
 
 </form>
-
 </div>
-
 </body>
 </html>

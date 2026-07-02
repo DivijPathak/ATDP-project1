@@ -12,3 +12,5 @@ I love using speed and quick movements to beat people
 i am not ok sacrificing stats
 I love being in the middle of actions rather than on the side waiting
 i enjoy communicating and organizing players
+
+remember to add htmlspecialchars and other random validation
