@@ -7,32 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <?php include "header.php"; ?>
 <div class="container">
-
-    <h1>Soccer Position Quiz!</h1>
-
-    <p>Answer each questions that will determine which positions suites you</p>
+    <h1 id="first">Answer each of the questions which will determine what position suites you</h1>
 
     <form action="output.php" method="POST">
 
         <h2>Basic Info</h2>
 
             <label>Name: </label>
-            <input type="text" name="name" required>
+            <input type="text" name="name" required maxlength="50">
 
             <label>Email: </label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required maxlength="200">
             
             <p>Gender: </p>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male">Male</label>
+            <div class="gender-stuff">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
 
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
 
-            <input type="radio" id="other" name="gender" value="Other">
-            <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+            
 
             <label>Date of Birth:</label>
             <input type="date" name="dob" required>
@@ -77,7 +77,7 @@ foreach ($questions as $i => $question) {
 
     foreach($options as $value => $text){
         echo "<label>";
-        echo "<input type='radio' name='q$i' value='$value' required> $text";
+        echo "<input class='qz' type='radio' name='q$i' value='$value' required> $text";
         echo "</label><br>";
     }
 
@@ -91,5 +91,38 @@ foreach ($questions as $i => $question) {
 
 </form>
 </div>
+
+
+
+<div id="progressBox">
+    <h3>Quiz Progress</h3>
+    <p id="progress">0 / 14 answered</p>
+    <p id="topPositions">Answer to see your position!</p>
+</div>
+
+<script>
+const questions = document.querySelectorAll(".qz");
+const total = 14;
+function updateProgress() {
+    let answered = new Set();
+     questions.forEach(q => {
+        if (q.checked) {
+            answered.add(q.name);
+        }
+    });
+    document.getElementById("progress").innerHTML =
+        answered.size + " / " + total + " answered (" +
+        Math.round(answered.size / total * 100) + "%)";
+}
+questions.forEach(q => {
+    q.addEventListener("change", updateProgress);
+});
+</script>
+
+<p>
+<a href="https://atdpsites.berkeley.edu/validate/">
+Validate page
+</a>
+</p>
 </body>
 </html>

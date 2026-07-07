@@ -28,11 +28,17 @@ label{
 
 input[type=text],
 input[type=email],
-input[type=date],
+input[type=date]{
+    width:100%;
+    border:1px solid #dad7d7;
+    border-radius:10px;
+    font-size:16px;
+}
 input[type=radio]{
     padding:10px;
     margin-bottom:21px;
     box-sizing:border-box;
+    
 }
 
 input[type=submit]{
@@ -40,4 +46,118 @@ input[type=submit]{
     color:white;
     padding:10px 25px;
     font-size:30px;
+}
+
+.header{
+    background:#4c3c85;
+    color:white;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    border-radius:20px;
+    margin-bottom:30px;
+    font-size: 40px;
+}
+
+.logo{
+    width:180px;
+    height:auto;
+
+}
+.logo-circle{
+    width: 150px;
+    height: 150px;
+    background: tan;     
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gender-stuff{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:21px;
+}
+
+.gender-stuff label{
+    display:flex;
+    align-items:center;
+    margin:0;
+}
+
+.gender-stuff input[type=radio]{
+    margin-right:8px;
+    margin-bottom:0;
+}
+
+p{
+    line-height:1.6;
+}
+
+h2{
+    margin-top:28px;
+}
+
+.question{
+    background:#f8f9fb;
+    padding:15px;
+    border-radius:15px;
+}
+
+input[type=submit]{
+    background:#1a54d2;
+    color:white;
+    padding:10px 30px;
+    font-size:35px;
+    border-radius:15px;
+    cursor:pointer;
+    display:block;
+    margin:30px auto 11px auto;
+    transition:0.3s;
+}
+
+input[type=submit]:hover{
+    background:#042772;
+    transform:scale(1.10);
+}
+#first{
+    color:black;
+}
+
+#progressBox{
+    background:rgb(111, 171, 135);
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    padding:15px;
+    border-radius:16px;
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+    width:220px;
+}
+
+.error{
+    max-width:500px;
+    margin:80px auto;
+    padding:25px;
+    background:#b69c9c;
+    border-radius:20px;
+    text-align:center;
+    font-size:1.4rem;
+    font-weight:bold;
+    color:#6d0707;
+    box-shadow:0 7px 21px rgba(0,0,0,.3);
+    animation:shake 2s ease;
+    border:4px dashed #e44754;
+
+}
+
+@keyframes shake{
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-30px);}
+    50%{transform:translateX(40px);}
+    75%{transform:translateX(-30px);}
+    100%{transform:translateX(0);}
 }

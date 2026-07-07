@@ -28,6 +28,7 @@ function calculatePosition($answers){
     $scores["Winger"] += 2 * $answers[3];
     $scores["Striker"] += $answers[3];
     $scores["Defender"] -= $answers[3];
+    $scores["Goalkeeper"] -= $answers[3];
 
     // Q 5
     $scores["Goalkeeper"] += 2 * $answers[4];
@@ -42,12 +43,14 @@ function calculatePosition($answers){
     $scores["Striker"] -= $answers[5];
 
     // Q 7
-    $scores["Striker"] += 2 * $answers[6];
-    $scores["Midfielder"] -= 2 * $answers[6];
+    $scores["Striker"] += 3 * $answers[6];
+    $scores["Midfielder"] -= 3 * $answers[6];
 
     // Q 8
     $scores["Striker"] += 2 * $answers[7];
     $scores["Midfielder"] -= 2 * $answers[7];
+    $scores["Defender"] += $answers[7];
+    $scores["Goalie"] += $answers[7];
 
     // Q 9
     $scores["Goalkeeper"] += $answers[8];
@@ -60,7 +63,7 @@ function calculatePosition($answers){
     $scores["Defender"] += $answers[9];
 
     // Q 11
-    $scores["Winger"] += 2 * $answers[10];
+    $scores["Winger"] += 3 * $answers[10];
     $scores["Striker"] += $answers[10];
     $scores["Goalkeeper"] -= $answers[10];
 
@@ -71,8 +74,9 @@ function calculatePosition($answers){
     $scores["Goalkeeper"] -= $answers[11];
 
     // Q 13
-    $scores["Midfielder"] += 2 * $answers[12];
-    $scores["Goalkeeper"] -= $answers[12];
+    $scores["Midfielder"] += 3 * $answers[12];
+    $scores["Goalkeeper"] -= 2 * $answers[12];
+    $scores["Striker"] -= $answers[12];
 
     // Q 14
     $scores["Goalkeeper"] += 2 * $answers[13];
