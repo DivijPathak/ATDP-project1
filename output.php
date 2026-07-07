@@ -67,7 +67,6 @@ $secondary = getSecondary($scores);
 if($secondary != ""){
     echo "<h3>Secondary Trait</h3>";
     echo "<p>You also showed some good qualties of a <strong>$secondary</strong>.</p>";
-    <p><?= getDescription($secondary) ?></p>
 }
 
 ?>
